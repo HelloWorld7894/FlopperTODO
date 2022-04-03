@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> NOT WORKING DUE TO NODE.JS FILES USING IN WEB-->
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <script src="Page.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="Page.css">
+    </head>
+    <body>
+        <div id="topbar" style="height: 75px;">
+            <h1 class="top-elem">TODO list:</h1>
+            <button class="top-elem" id="top1" style="margin-left: 30%; margin-top: 5px;">Add TODO</button>
+            <button class="top-elem" id="top2" style="margin-left: 5px; margin-top: 5px;">Remove all</button>
+            <button class="top-elem" id="top3" style="margin-left: 5px; margin-top: 5px;">Save</button>
+        </div>
+        <div id="todolist">
+        </div>
+        
+    </body>
+</html>
