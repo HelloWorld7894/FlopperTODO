@@ -44,7 +44,7 @@ $(document).on("click", "#top3", () => {
         Result.set(value.children[0].innerHTML, value.children[1].innerHTML)
     })
 
-    ipcRenderer.sendSync("action-save", Result)
+    ipcRenderer.send("action-save", Result)
 })
 
 function Rewrite(index){

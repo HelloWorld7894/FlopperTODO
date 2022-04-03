@@ -62,4 +62,6 @@ ipcMain.on("action-save", (event, arg) => {
     })
 
     Fs.writeFileSync(__dirname + "/data/Saved", ToWrite)
+
+    event.returnValue = "Success"
 })
