@@ -12,7 +12,7 @@ app.on("ready", async () => {
         width: 800,
         height: 600,
         autoHideMenuBar: true,
-        resizable: true,
+        resizable: false,
         webPreferences: {
             nodeIntegration: true, //For using require in web
             contextIsolation: false
