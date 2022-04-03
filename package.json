@@ -4,14 +4,31 @@
   "description": "A simple todo app",
   "main": "Main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux"
   },
   "author": "Borecnakonec33",
   "license": "MIT",
   "dependencies": {
-    "electron": "^18.0.1",
     "electron-prompt": "^1.7.0",
-    "jquery": "^3.6.0",
-    "vex-js": "^4.1.0"
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "electron": "^18.0.1",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "appId": "com.floppertodo",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "category": "public.floppertodo"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }
