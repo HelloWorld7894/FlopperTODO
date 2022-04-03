@@ -21,7 +21,7 @@ app.on("ready", async () => {
 
     
     await Win.loadFile(__dirname + "/src/Page.html")
-    Win.webContents.openDevTools() //just for debugging
+    //Win.webContents.openDevTools() //just for debugging
 })
 
 ipcMain.on("action", (event, arg) => {
