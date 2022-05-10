@@ -7,7 +7,6 @@ jQuery(() => {
         console.log(arg)
 
         var Segm = arg.split("\n")
-        Segm.pop()
 
         for(let i = 0; i < (Segm.length / 2); i++){
             $("#todolist").append(`<div class="elem">
