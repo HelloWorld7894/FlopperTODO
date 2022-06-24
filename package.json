@@ -4,7 +4,7 @@
   "description": "A simple todo app",
   "main": "Main.js",
   "scripts": {
-    "start": "electron .",
+    "todo-start": "electron .",
     "build-win": "electron-builder --win",
     "build-mac": "electron-builder --mac",
     "build-linux": "electron-builder --linux"

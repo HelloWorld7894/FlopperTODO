@@ -27,8 +27,8 @@ app.on("ready", async () => {
 ipcMain.on("action", (event, arg) => {
     if(arg == "ask"){
         let Data = Fs.readFileSync(__dirname + "/data/Saved", {encoding: "utf-8", flag: "r"})
+        Data.trimEnd()
         console.log(Data)
-
         event.sender.send("data", Data)
     }
 })
@@ -55,10 +55,13 @@ ipcMain.on("action-sync", (event, arg) => {
 ipcMain.on("action-save", (event, arg) => {
 
     var ToWrite = ""
-
+    console.log(arg)
     arg.forEach((values, keys) => {
-        ToWrite += (keys + "\n")
-        ToWrite += (values + "\n")
+        console.log(values, keys)
+        if(keys != "" || values != ""){
+            ToWrite += (keys + "\n")
+            ToWrite += (values + "\n")   
+        }
     })
 
     Fs.writeFileSync(__dirname + "/data/Saved", ToWrite)
